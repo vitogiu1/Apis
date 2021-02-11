@@ -1,0 +1,8 @@
+{
+    "redirects": [
+      {
+        "source": "/api",
+        "destination": "https://github.com/CloudyyUw/Apis"
+      }
+    ]
+  }
