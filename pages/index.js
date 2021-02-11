@@ -1,8 +1,5 @@
-export default function IndexPage() {
+export default function Home() {
   return (
-    <!DOCTYPE html>
-    <html>
-    
     <head>
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,7 +72,5 @@ export default function IndexPage() {
       </div>
       </div>
     </body>
-    
-    </html>
     )
 }
