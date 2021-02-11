@@ -1,2 +1,2 @@
-# c.api
+# Apis
 A simple API in development
