@@ -3,10 +3,6 @@
     {
       "source": "/",
       "destination": "https://github.com/CloudyyUw/Apis"
-      },
-    {
-      "source": "/register",
-      "destination": "/register.html"
       }
     ]
 }
