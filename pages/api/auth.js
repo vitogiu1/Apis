@@ -1,3 +1,4 @@
+require("dotenv").config({ path: __dirname + '/.env' });
 import nodemailer from 'nodemailer';
 var AUTHCODE = process.env.VALIDKEY
 import Cors from 'cors'
