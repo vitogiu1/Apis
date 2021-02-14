@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "node-fetch": "^2.6.1"
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "jimp": "^0.16.1",
