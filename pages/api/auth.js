@@ -31,3 +31,4 @@ async function SendMail(key, email) {
   const res = await fetch(`${process.env.URL}?code=${process.env.EAUTH}&email=${email}&key=${key}`)
   return await res.json();
 }
+// Here I use an external api of mine, because vercel blocks some things that nodemailer needs.
