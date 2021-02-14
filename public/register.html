@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link id="favicon" rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Register | Apis.cloudyyuw</title>
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.js"></script>
+    <script src="./index.js"></script>
+    <style>
+        .content {
+            max-width: 500px;
+            margin: auto;
+            padding: 15px;
+            border: 2px solid rgb(53, 53, 53);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body
+    style="@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap'); font-family: 'Source Sans Pro', sans-serif">
+    <br><br>
+    <div class="content">
+        <h2 class="ui header">API-Key</h2>
+        <p>Complete the information so that you receive a key to use the API</p>
+        <hr>
+        <div class="ui form success">
+            <div class="field">
+                <label>E-mail <b style="color:rgb(255, 46, 46)">*</b></label>
+                <div class="ui input focus">
+                    <input type="email" id="EMAIL" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div id="loading" class="ui active centered inline loader" style="display: none;"></div>
+            <div id="msg" class="ui success message" style="display: none;">
+                <div class="header">Completed</div>
+                <p>An email with the information was sent to: <b id="outEmail"></b></p>
+            </div>
+            <div id="submit" onclick="send()" class="ui submit button">Submit</div>
+        </div>
+    </div>
+</body>
+
+</html>
