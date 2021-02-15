@@ -1,5 +1,6 @@
 const Jimp = require('jimp');
 import Cors from 'cors'
+import Key from "../../util/Key";
 
 const cors = Cors({
     methods: ['GET', 'HEAD'],
@@ -20,12 +21,12 @@ export default async function handler(req, res) {
     res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
     await runMiddleware(req, res, cors)
     let apiKEY = req.query.key;
-    if (apiKEY !== process.env.VALIDKEY) {
+    if (await Key.validate(apiKEY, "key") == false) {
         return res.status(400).json({
             status: "400: Bad Request",
             message: "Invalid key"
         })
-    } // temp
+    }
     const { image, size } = req.query;
     const Size = Number(size);
     if (isNaN(Size) || Size < 1) {
