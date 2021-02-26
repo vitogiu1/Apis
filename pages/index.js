@@ -112,7 +112,6 @@ export default function Home() {
                         <a href="https://apis.cloudyyuw.vercel.app/api">
                           GET request routes
                         </a>
-                        &gt;
                       </div>
                       <br />
                     </div>
