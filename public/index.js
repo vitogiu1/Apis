@@ -8,7 +8,7 @@ async function send() {
     });
 
     $('#loading').show()
-    var url = "https://apis.cloudyyuw.vercel.app/api/auth" //"http://localhost:3000/api/auth"
+    var url = "https://apis-cloudyyuw.vercel.app/api/auth" //"http://localhost:3000/api/auth"
     const x = await fetch(`${url}?email=${emailValue}`, header)
     const parsed = await x.json()
     renderMessage(parsed.message, parsed.error)
