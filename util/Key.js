@@ -1,16 +1,12 @@
 import Firebase from "./FirebaseApp";
-const database = Firebase.firestore()
+const database = Firebase.firestore();
+
 export default {
     gen(Level) {
-        var Key;
-        if (Level == 1) {
-            Key = Math.random().toString(36).substring(2);
-        }
-        if (Level == 2) {
-            Key = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(1);
-        }
-        if (Level == 3) {
-            Key = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(1) + Math.random().toString(36).substring(3);
+        var Key = ""
+        var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for(var i = 0; i < Level; i++){
+            Key += string.charAt(Math.floor(Math.random() * string.length))
         }
         return Key;
     },

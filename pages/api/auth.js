@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   const { email } = req.query;
   const Valid = await Key.validate(email, "email");
   if(Valid == true){
-    const code = Key.gen(3);
+    const code = Key.gen(42);
     await database.collection("keys").add({
       key: code,
       Email: email,
