@@ -3,6 +3,7 @@ export default function handler(req, res) {
     res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
     res.json({
         status: "200 Ok",
+        info: `IP: ${req.socket.localAddress} PORT: ${req.socket.localPort}`,
         endpoints: [
             "GET /api/blur?image=image&amount=number",
             "GET /api/greyscale?image=image",
