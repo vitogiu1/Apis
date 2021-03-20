@@ -39,4 +39,3 @@ export default async function handler(req, res) {
     const buffer = await Image.getBufferAsync("image/png");
     return res.end(buffer)
 }
-// https://cdn.cloudyyuw.repl.co/i/d0ucuz9i3lq.jpg
