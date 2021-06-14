@@ -19,13 +19,7 @@ function runMiddleware(req, res, fn) {
 export default async function handler(req, res) {
     res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
     await runMiddleware(req, res, cors)
-    let apiKEY = req.query.key;
-    if (await Key.validate(apiKEY, "key") == false) {
-        return res.status(400).json({
-            status: "400: Bad Request",
-            message: "Invalid key"
-        })
-    }
+    
     const { image, amount } = req.query;
     const blurA = Number(amount) || 20
     const Image = await Jimp.read(image);
