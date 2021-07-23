@@ -10,7 +10,8 @@ export default function handler(req, res) {
             "GET /api/pixelate?image=image&amount=number",
             "GET /api/posterize?image=image&amount=number",
             "GET /api/sepia?image=image",
-            "GET /api/circle?image=image&size=number"
+            "GET /api/circle?image=image&size=number",
+            "GET /api/resize?image=image&size=number"
         ]
     })
 }
